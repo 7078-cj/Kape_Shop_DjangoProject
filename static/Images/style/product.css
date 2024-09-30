@@ -1,0 +1,68 @@
+.product-wrapper{
+    
+    
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background:url('homepage.jpg') no-repeat;
+        background-size: cover;
+        background-position: center;
+        flex-wrap: wrap;
+        
+    
+    
+}
+
+
+.card {
+    background: transparent;
+    border: 2px solid rgb(117, 94, 94);
+    backdrop-filter: blur(20px);
+    border-radius: 20px; /* Rounded corners */
+    padding: 20px; /* Inner padding */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional subtle shadow */
+    width: 600px; /* Adjust width as needed */
+    margin: 10px; /* Add spacing between cards */
+    text-align: center; /* Center the content horizontally */
+    position: relative;
+  }
+  .card:hover{
+    backdrop-filter: blur(100px);
+    border-radius: 0; /* Rounded corners */
+  }
+
+  .card a {
+    align-items: center;
+    color: #d4c5c5; /* Text color for the link */
+    text-decoration: none; /* Remove underline from link */
+    padding: 5px 10px; /* Padding for the link */
+    border: 1px solid #333; /* Border for the link */
+    border-radius: 3px; /* Rounded corners for the link */
+  }
+  .card img {
+    width: 500px; /* Adjust width as needed for profile picture size */
+    height: 500px; /* Adjust height to match width for a square image */
+    border-radius: 50%; /* Create a circular profile picture */
+    margin-right: 20px; /* Add spacing between image and content */
+    align-self: center;
+  }
+  .card h4 {
+    color: #d4c5c5;
+    margin-top: 10px;
+    margin-bottom: 10px; /* Add space between heading and text */
+  }
+  .card a {
+    color: #ffffff; /* Text color for the link */
+    text-decoration: none; /* Remove underline from link */
+    padding: 10px,10px,10px,10px;/* Padding for the link */
+    border: 1px solid #333; /* Border for the link */
+    border-radius: 3px; /* Rounded corners for the link */
+  }
+  
+  .card a:hover {
+    background-color: #ddd; /* Change background color on hover */
+    cursor: pointer; /* Change cursor to pointer on hover */
+  }
+
+  

@@ -1,0 +1,38 @@
+{%extends 'main.html'%}
+
+{% load static %}
+
+
+{% block content %}
+    
+
+    
+    <div class='login-wrapper'>
+        <div class='wrapper'>
+            <h1>Register<i class='bx bxs-coffee-bean'></i></h1>
+            {% comment %} <form method="POST" >
+                {% csrf_token %}
+                <div class='input-box'>
+                
+                {{form}}
+                
+                </div>
+                <input type='submit' class='btn'/> {% endcomment %}
+                <form method="POST" >
+                    {% csrf_token %}
+                {% for field in form %}
+                <div class='input-box'>
+                    <label for="room_name" class="label">{{field.label}}:</label>
+                    {{field}}
+                </div>
+                {% endfor %}
+                <a href="{% url 'log-in' %}">LogIn</a>
+
+
+                <button class="btn btn--main" type="submit">Submit</button>
+        </div>
+    </div>
+        
+
+
+{% endblock content %}

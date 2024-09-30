@@ -1,0 +1,39 @@
+{%extends 'main.html'%}
+
+{% load static %}
+
+
+{% block content %}
+        
+    <div class="product-wrapper">
+        <div>
+        <h1>ORDERS</h1>
+        </div>
+
+        {% for product in order %}
+            
+            
+            
+            <div class="card">
+                <a href="{% url 'product' product.orders.id %}">{{product.orders.productName}}</h4></a>
+             
+             <h4>Quantity:{{product.quantity}}</h4>
+             <img src="{{product.orders.image.url}}"/>
+             <a href="{% url 'delete-orders' product.id%}">Delivered</a>
+  
+             </div>
+            
+                
+            
+           
+            
+            
+                
+           
+                
+            
+            {%endfor%}
+    </div>
+   
+
+{% endblock content %}

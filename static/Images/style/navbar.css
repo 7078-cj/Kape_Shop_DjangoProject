@@ -1,0 +1,42 @@
+.navbar {
+    overflow: hidden; /* Prevent text overflow outside the navbar */
+    background-color: #8b8585; /* Set background color */
+    position: fixed; /* Fix the navbar to the top of the page */
+    top: 0; /* Position at the top */
+    width: 100%; /* Stretch across the entire width */
+    display: flex; /* Allow for horizontal layout of elements */
+    justify-content: space-between; /* Align items horizontally */
+    margin-bottom: 10px;
+  }
+  
+  .navbar a {
+    float: left; /* Originally for horizontal alignment, use flexbox instead */
+    display: block; /* Make links behave like block elements */
+    color: white; /* Text color for links */
+    text-align: center; /* Center text within links */
+    padding: 14px 25px; /* Padding for links */
+    text-decoration: none; /* Remove underline from links */
+    font-size: 16px; /* Font size for links */
+    border-radius: 20px;
+    border: 1px solid #333;
+  }
+  .navbar h1 {
+    float: left; /* Originally for horizontal alignment, use flexbox instead */
+    display: block; /* Make links behave like block elements */
+    color: white; /* Text color for links */
+    text-align: center; /* Center text within links */
+    padding: 14px 25px; /* Padding for links */
+    
+    font-size: 16px; /* Font size for links */
+    border-radius: 20px;
+    border: 1px solid #333;
+  }
+  
+  .navbar a:hover {
+    background-color: #ddd; /* Background color on hover */
+    color: black; /* Text color on hover */
+  }
+  .navbar-spacer {
+    height: 50px; /* Adjust the height for desired spacing */
+    background-color: transparent; /* Makes the spacer invisible */
+  }

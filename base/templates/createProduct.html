@@ -1,0 +1,25 @@
+{%extends 'main.html'%}
+
+{% load static %}
+
+
+{% block content %}
+<div>
+    
+    <form action="" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        {% for field in form %}
+                <div class=''>
+                    <label for="room_name" class="">{{field.label}}:</label>
+                    {{field}}
+                </div>
+                {% endfor %}
+        <input type='submit' class='btn'/>
+    </form>
+</div>
+    
+
+
+    
+{% endblock content %}
+

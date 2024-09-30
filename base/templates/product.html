@@ -1,0 +1,33 @@
+{%extends 'main.html'%}
+
+{% load static %}
+
+
+{% block content %}
+    
+    <div class="product-wrapper">
+        
+    <div class="card">
+        <a href="{{request.META.HTTP_REFERER}}"><i class='bx bx-left-arrow-alt'></i></a>
+        <h4>{{product.productName}}</h4>
+            <h4>{{product.description}}</h4>
+            <img src="{{product.image.url}}"/>
+            
+            <a href="{% url 'update-product' product.id  %}" class="update-product">Update</a>
+            <a href="{% url 'delete-product' product.id %} ">Delete</a>
+            
+            <footer>
+                <form method='POST'>
+                    {% csrf_token %}
+                    <input type="number" name="quantity"/>
+                    
+                    <button type="submit">Add to Cart</button>
+                    
+                </form>
+            </footer>
+    </div>
+   
+    </div>
+
+{% endblock content %}
+

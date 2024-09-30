@@ -1,0 +1,27 @@
+{% extends "main.html" %}
+
+{% block content%}
+
+<div>
+    <form method="POST" action="">
+        {% csrf_token %}
+        
+        <p>Is the order already delivered? "{{obj.orders.productName}}"??</p>
+        <h4>{{obj.orders.productName}}</h4>
+             
+        <h4>Quantity:{{obj.quantity}}</h4>
+        <img src="{{obj.orders.image.url}}"/>
+
+
+        
+        <a href="{{request.META.HTTP_REFERER}}"><i class='bx bx-left-arrow-alt bx-lg'></i></a>
+        <input type="submit" value="Confirm"/>
+
+    </form>
+
+
+
+</div>
+
+
+{% endblock content %}

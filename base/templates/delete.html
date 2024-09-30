@@ -1,0 +1,26 @@
+{% extends "main.html" %}
+
+{% block content%}
+
+<div>
+    <form method="POST" action="">
+        {% csrf_token %}
+        
+        <p>u sure u want to delete ??</p>
+        <h4>{{obj.productName}}</h4>
+            <h4>{{obj.description}}</h4>
+            <img src="{{obj.image.url}}"/>
+
+
+        
+        <a href="{{request.META.HTTP_REFERER}}"><i class='bx bx-left-arrow-alt bx-lg'></i></a>
+        <input type="submit" value="Confirm"/>
+
+    </form>
+
+
+
+</div>
+
+
+{% endblock content %}

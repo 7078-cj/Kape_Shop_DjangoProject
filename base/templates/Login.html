@@ -1,0 +1,34 @@
+{%extends 'main.html'%}
+
+{% load static %}
+
+
+{% block content %}
+    
+
+
+    <div class='login-wrapper'>
+    <div class='wrapper'>
+      <h1>LogIn<i class='bx bxs-coffee-bean'></i></h1>
+      <form method="POST" >
+        {% csrf_token %}
+        <div class='input-box'>
+         
+          <input type='text' name='username' placeholder='Enter username' />
+          <i class='bx bx-user bx-md'></i>
+        </div>
+
+
+        <div class='input-box'>
+        
+        <input type='password' name='password' placeholder='Enter password' />
+        <i class='bx bxs-lock-alt bx-md' ></i>
+
+        <a href="{% url 'register' %}">register</a>
+        
+        </div>
+        <input type='submit' class='btn'/>
+
+
+{% endblock content %}
+
